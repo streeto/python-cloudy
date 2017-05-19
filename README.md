@@ -23,7 +23,13 @@ I managed to specify these paths by hand to the setup script, but not in a porta
 way. I only tested in my Mac using Python 3.6 from Homebrew.
 
 Also, I had to edit ``source/cddrive.h`` to include another header. There's probably
-a way to avoid this, but it has to be this way for now.
+a way to avoid this, but it has to be this way for now. Just add this line at the beginning,
+after the first ``#define``:
+
+```
+#define CDDRIVE_H_
+#include "cddefines.h"
+```
 
 OK, building the cython extension:
 
